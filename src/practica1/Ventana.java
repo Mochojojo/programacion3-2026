@@ -10,14 +10,14 @@ public class Ventana extends JFrame{
 		setSize(500, 500); //tamano de la ventana
 		setLocation(0,0); //coordenadas de inicio en la pantalla
 		setBounds(100, 100, 500, 500);//tamano del rectangulo
-		setTitle("nigga"); //titulo de la ventana
+		setTitle("Tienda"); //titulo de la ventana
 		setLocationRelativeTo(null); //posicion relativa a un componente, si es null aparece en el centro
 		setResizable(false); //ajustar tamano de la ventana con el cursor
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //dejar de ejecutar el programa al cerrar la ventana
 		
 		//icono de la ventana
 		Toolkit tk = Toolkit.getDefaultToolkit();
-		Image icono = tk.getImage("src/practica1/img/icono.jpg"); //necesario crear una carpeta img
+		Image icono = tk.getImage("src/img/iconoTienda.jpg"); //necesario crear una carpeta img
 		setIconImage(icono);
 		
 		MiPanel panelito = new MiPanel();

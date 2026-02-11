@@ -1,4 +1,4 @@
-package practica1;
+package views;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -16,14 +16,6 @@ public class MiPanel extends JPanel{
 		setBackground(new Color(177, 26, 242)); //rgb
 		setLayout(null);
 		
-		boton();
-		
-		JLabel saludo = new JLabel("Bienvenido!");
-		saludo.setForeground(Color.PINK);
-		
-	}
-	
-	public void boton() {
 		JButton boton = new JButton("Mi boton");
 		boton.setBounds(50,50,200,30); //x,y,ancho,altura
 		boton.setBackground(Color.GREEN);
@@ -31,12 +23,6 @@ public class MiPanel extends JPanel{
 		boton.setToolTipText("fasewvniefcn");
 		boton.setFont(new Font("Arial", Font.ITALIC, 20));
 		
-		imagen(boton);
-		
-		add(boton);
-	}
-	
-	public void imagen(JButton boton){
 		try {
 			Image icono = ImageIO.read(getClass().getResource("../img/roblo.png"));
 			icono = icono.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
@@ -45,5 +31,11 @@ public class MiPanel extends JPanel{
 		catch(Exception ex){
 			System.out.println("No se encontro la imagen");
 		}
+		
+		add(boton);
+		
+		JLabel saludo = new JLabel("Bienvenido!");
+		saludo.setForeground(Color.PINK);
+		
 	}
 }

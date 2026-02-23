@@ -1,7 +1,11 @@
 package practica1;
 
+import java.awt.Cursor;
 import java.awt.Image;
+import java.awt.Point;
 import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class Ventana extends JFrame{
@@ -19,6 +23,10 @@ public class Ventana extends JFrame{
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Image icono = tk.getImage("src/img/iconoTienda.jpg"); //necesario crear una carpeta img
 		setIconImage(icono);
+		
+		ImageIcon cursorIcono = new ImageIcon("src/img/roblo.png");
+		Cursor miCursor = tk.createCustomCursor(cursorIcono.getImage(), new Point(0,0), "Cursor");
+		setCursor(miCursor);
 		
 		MiPanel panelito = new MiPanel();
 		add(panelito);
